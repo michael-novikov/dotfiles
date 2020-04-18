@@ -93,7 +93,7 @@ set history=1000
 syntax enable " Enable syntax highlighting
 set showmatch " show matching brackets
 set cc=80 " set a column border for good coding style
-set autochdir " sets the cwd to whatever file is in view. This allows better omni com pletion.
+set autochdir " sets the cwd to whatever file is in view. This allows better omni completion.
 
 " Do not use marks in lh-cpp plugin
 " let g:usemarks=0
@@ -219,7 +219,7 @@ nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 " RG
 " bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <silent> K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>ps :Ag<SPACE>
 
