@@ -155,6 +155,9 @@ let g:ag_working_path_mode="r"
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" Termdebug
+packadd termdebug
+
 " -- Mappings
 let mapleader = " "
 
@@ -225,4 +228,7 @@ nnoremap <Leader>ps :Ag<SPACE>
 
 " Bbye delete buffer
 nnoremap <Leader>q :Bdelete<CR>
+
+" Termdebug
+nnoremap <F6> :Termdebug %:r<CR><c-w>2j<c-w>L<c-w>h
 
