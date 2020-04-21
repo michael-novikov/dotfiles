@@ -67,6 +67,8 @@ set relativenumber        " Display relative line numbers
 set ruler                 " Display cursor position
 set wrap                  " Wrap lines when they are too long
 set noequalalways         " When closing a window the extra lines are given to the window next to it
+set splitbelow            " Splitting feels more natural
+set splitright            " Splitting feels more natural
 
 set scrolloff=1           " Display at least 1 line around you cursor (for scrolling)
 
@@ -186,15 +188,15 @@ if has('nvim')
 endif
 
 " Easy windows switching with leader key
-nmap <leader>h :wincmd h<CR>
-nmap <leader>j :wincmd j<CR>
-nmap <leader>k :wincmd k<CR>
-nmap <leader>l :wincmd l<CR>
+nmap <c-h> :wincmd h<CR>
+nmap <c-j> :wincmd j<CR>
+nmap <c-k> :wincmd k<CR>
+nmap <c-l> :wincmd l<CR>
 if has('nvim')
-  tnoremap <leader>h <c-\><c-n><c-w>h
-  tnoremap <leader>j <c-\><c-n><c-w>j
-  tnoremap <leader>k <c-\><c-n><c-w>k
-  tnoremap <leader>l <c-\><c-n><c-w>l
+  tnoremap <c-h> <c-\><c-n><c-w>h
+  tnoremap <c-j> <c-\><c-n><c-w>j
+  tnoremap <c-k> <c-\><c-n><c-w>k
+  tnoremap <c-l> <c-\><c-n><c-w>l
 endif
 
 " Maps to resizing a window split
