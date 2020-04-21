@@ -93,7 +93,7 @@ set history=1000
 syntax enable " Enable syntax highlighting
 set showmatch " show matching brackets
 set cc=80 " set a column border for good coding style
-set autochdir " sets the cwd to whatever file is in view. This allows better omni completion.
+" set autochdir " sets the cwd to whatever file is in view. This allows better omni completion.
 
 " Do not use marks in lh-cpp plugin
 " let g:usemarks=0
