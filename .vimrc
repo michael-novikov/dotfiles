@@ -232,5 +232,5 @@ nnoremap <Leader>ps :Ag<SPACE>
 nnoremap <Leader>q :Bdelete<CR>
 
 " Termdebug
-nnoremap <F6> :Termdebug %:r<CR><c-w>2j<c-w>L<c-w>h
+nnoremap <F6> :Termdebug %:r<CR><c-w>K<c-w>j<c-w>L<c-w>h<c-w>k
 
