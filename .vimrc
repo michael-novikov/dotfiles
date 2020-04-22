@@ -215,7 +215,7 @@ nnoremap <leader>pw :NERDTreeToggleVCS<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " Open Undotree
-nnoremap <silent> <leader>u :UndotreeToggle<CR>
+nnoremap <silent> <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " YCM
 nnoremap <silent> <leader>gr :YcmForceCompileAndDiagnostics<CR>
