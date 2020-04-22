@@ -36,7 +36,7 @@ Plugin 'scrooloose/vim-colon-therapy'
 
 " Colorschemes
 Plugin 'morhetz/gruvbox'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'iCyMind/NeoSolarized'
 
 " C++ plugins
 " Plugin 'LucHermitte/lh-vim-lib'
@@ -104,7 +104,7 @@ set cc=80 " set a column border for good coding style
 set termguicolors
 let g:gruvbox_italic=1
 set background=dark " Use the dark version of colorscheme
-colorscheme gruvbox
+colorscheme NeoSolarized " Options: NeoSolarized gruvbox
 
 " -- Airline
 let g:airline#extensions#tabline#enabled = 1
