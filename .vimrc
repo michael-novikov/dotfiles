@@ -234,3 +234,11 @@ nnoremap <Leader>q :Bdelete<CR>
 " Termdebug
 nnoremap <F6> :Termdebug %:r<CR><c-w>K<c-w>j<c-w>L<c-w>h<c-w>k
 
+" Open terminal
+if has('nvim')
+  nnoremap <leader>t :10split<CR>:te<CR>
+else
+  set termwinsize=10x0
+  nnoremap <leader>t :terminal<CR>
+endif
+
