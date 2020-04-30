@@ -104,7 +104,7 @@ set cc=80 " set a column border for good coding style
 set termguicolors
 let g:gruvbox_italic=1
 set background=dark " Use the dark version of colorscheme
-colorscheme NeoSolarized " Options: NeoSolarized gruvbox
+colorscheme gruvbox " Options: NeoSolarized gruvbox
 
 " -- Airline
 let g:airline#extensions#tabline#enabled = 1
