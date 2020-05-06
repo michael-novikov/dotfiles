@@ -132,11 +132,11 @@ if has("gui_running")
 endif
 
 " -- Tabs
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set autoindent " indent a new line the same amount as the line just typed
-" set expandtab " converts tabs to white space
+set expandtab " converts tabs to white space
 
 " ag items. I need the silent ag.
 if executable('ag')
