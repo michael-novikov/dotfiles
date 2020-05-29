@@ -21,7 +21,6 @@ Plugin 'mbbill/undotree' " The undo history visualizer for VIM
 " Airline
 Plugin 'vim-airline/vim-airline' " Lean & mean status/tabline for vim that's light as air.
 Plugin 'vim-airline/vim-airline-themes' " Install also: github.com/powerline/fonts
-Plugin 'bling/vim-bufferline' " Integrated with Airline
 
 " Buffers
 Plugin 'moll/vim-bbye' " allows you to do delete buffers without closing your windows or messing up your layout
@@ -109,12 +108,6 @@ colorscheme gruvbox " Options: NeoSolarized gruvbox
 " -- Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
-" -- Bufferline
-let g:bufferline_echo = 0
-autocmd VimEnter *
-  \ let &statusline='%{bufferline#refresh_status()}'
-    \ .bufferline#get_status_string()
 
 " -- NERDTree
 " autocmd vimenter * NERDTree " Open NERDTree plugin at start
