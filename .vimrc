@@ -37,6 +37,9 @@ Plugin 'scrooloose/vim-colon-therapy'
 Plugin 'morhetz/gruvbox'
 Plugin 'iCyMind/NeoSolarized'
 
+" Git
+Plugin 'tpope/vim-fugitive'
+
 " C++ plugins
 " Plugin 'LucHermitte/lh-vim-lib'
 " Plugin 'LucHermitte/lh-style'
