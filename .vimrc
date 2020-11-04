@@ -33,10 +33,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'scrooloose/vim-colon-therapy'
 
 " Colors
-Plug 'sainnhe/gruvbox-material'
-
-" Debugger
-Plug 'puremourning/vimspector'
+Plug 'morhetz/gruvbox'
 
 " Initialize plugin system
 call plug#end()
@@ -97,15 +94,16 @@ set cc=120 " set a column border for good coding style
 
 " -- Color scheme
 set termguicolors
-let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_background = 'medium' " Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'soft' " Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_contrast_light = 'soft' " Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_italicize_comments = 0
 set background=dark " Use the dark version of colorscheme
-colorscheme gruvbox-material " Options: NeoSolarized gruvbox gruvbox-material
+colorscheme gruvbox
 
 " -- Airline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox_material'
 
 " -- NERDTree
 " autocmd vimenter * NERDTree " Open NERDTree plugin at start
@@ -152,8 +150,8 @@ let mapleader = " "
 
 nmap ; :
 
-noremap <silent> <leader>[ :set background=dark<CR>:AirlineTheme gruvbox_material<CR>
-noremap <silent> <leader>] :set background=light<CR>:AirlineTheme gruvbox_material<CR>
+noremap <silent> <leader>[ :set background=dark<CR>
+noremap <silent> <leader>] :set background=light<CR>
 
 " Maps to resizing a window split
 map - <C-W>-
@@ -164,36 +162,32 @@ map + <C-w>>
 " Clear the last search
 noremap <silent> <leader>/ :let @/ = ""<CR>
 
-nnoremap <leader>pf :Files<CR>
-nnoremap <leader>gd :GoDef<Enter>
-nnoremap <leader>pt :NERDTreeToggle<Enter>
-nnoremap <leader>pw :NERDTreeToggleVCS<Enter>
+nnoremap <silent> <leader>pf :Files<CR>
+nnoremap <silent> <leader>gd :GoDef<Enter>
+nnoremap <silent> <leader>pt :NERDTreeToggle<Enter>
+nnoremap <silent> <leader>pw :NERDTreeToggleVCS<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " Open Undotree
 nnoremap <silent> <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " YCM
-nnoremap <silent> <leader>gr :YcmForceCompileAndDiagnostics<CR>
+nnoremap <silent> <leader>gg :YcmForceCompileAndDiagnostics<CR>
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
-" bind K to grep word under cursor
+" bind F to grep word under cursor
 nnoremap <silent> F :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>ps :Ag<SPACE>
 
 " Bbye delete buffer
-nnoremap <Leader>q :Bdelete<CR>
+nnoremap <silent><Leader>q :Bdelete<CR>
 
 " Termdebug
-nnoremap <leader><F6> :Termdebug %:r<CR><c-w>K<c-w>j<c-w>L<c-w>h<c-w>k
-
-" Debugger
-let g:vimspector_install_gadgets = [ 'vscode-cpptools' ]
-let g:vimspector_enable_mappings = 'HUMAN'
+nnoremap <silent><F6> :Termdebug %:r<CR><c-w>K<c-w>j<c-w>L<c-w>h<c-w>k
 
 " Open terminal
-set termwinsize=10x0
-nnoremap <leader>t :terminal<CR>
+nnoremap <silent> <leader>t :below terminal ++rows=10<CR>
 
